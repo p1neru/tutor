@@ -1,0 +1,48 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "p1ne loader | fly race", HidePremium = false, SaveConfig = true, ConfigFolder = "fly-race-loader", IntroEnable = true, IntroText = "p1ne liblary"})
+
+OrionLib:MakeNotification({
+	Name = "pine loader",
+	Content = "fly race script loaded! thx for using script",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+
+local Tab = Window:MakeTab({
+	Name = "Main",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "Tp to finish",
+	Callback = function()
+      		print("inf wins!")
+            firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, game:GetService("Workspace").Worlds["1"].Launch.TouchInterest.Parent, 0)
+            wait(0.3)
+            firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, game:GetService("Workspace").Worlds["1"].Launch.TouchInterest.Parent, 1)
+            
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(150336.188, -0.850529492, -101000.164, 0.00407263683, 4.59881235e-08, -0.999991715, 2.15204157e-08, 1, 4.60761491e-08, 0.999991715, -2.17078888e-08, 0.00407263683)
+  	end    
+})
+
+
+local Tab = Window:MakeTab({
+	Name = "LocalPlayer",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddSlider({
+	Name = "FOV hack",
+	Min = 60,
+	Max = 120,
+	Default = 70,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "FOV changer",
+	Callback = function(c)
+        game.Workspace.Camera.FieldOfView = c
+		print("FOV change")
+	end    
+})
